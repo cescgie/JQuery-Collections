@@ -26,6 +26,7 @@ textarea.source
 {
 	width: 600px;
 	height: 100px;
+	padding-top: 25px;
 }
 
 div.preview  {
@@ -36,6 +37,19 @@ div.preview  {
 	padding: 2px;
 }
 
+.container {
+    position:relative;
+    width: 300px;
+    height: 100px;
+    border: 1px solid #ddd;
+}
+.img{
+    float:right;
+    position:absolute;
+    width:20px;
+    height:20px;
+
+}
 /* Code Syntax Styles */
 .csharpcode,.csharpcode pre{
   font-size:small;

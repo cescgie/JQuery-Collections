@@ -17,19 +17,22 @@
   <button id="click">SHOW TEXTAREA</button>
   <div id="show" style="display:none;">
     <br>
-    <textarea rows="4" cols="50" id="NoteText" class="source"></textarea>
     <div class="preview"></div>
+    <div class="container">
+      <a id="strike" href="#"><img src='https://cdn3.iconfinder.com/data/icons/unicons-vector-icons-pack/32/settings-128.png' class='img'></a>
+      <textarea rows="4" cols="50" id="textarea" class="source"></textarea>
+    </div>
   </div>
   <script type="text/javascript">
       $(function() {
           //Live Preview
-          $('textarea.source').livePreview({
+          $('textarea#textarea').livePreview({
               previewElement: $('div.preview'),
               allowedTags: ['p', 'strong', 'br', 'em', 'strike'],
               interval: 20
           });
           //Flexible Textarea
-          $(".source").flexible();
+          $("#textarea").flexible();
           //Button
           $("button").click(function(){
               var $this = $(this);
@@ -41,6 +44,9 @@
             	} else {
             	    $this.text('SHOW TEXTAREA');
               }
+          });
+          $('#strike').on('click', function(){
+            $('#textarea').val($('#textarea').val() + "<strike></strike>");
           });
       });
   </script>
