@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Page Title</title>
+    <title>jquery & javascript</title>
     <script type="text/javascript" src="lib/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="lib/jquery.livepreview.js"></script>
     <script type="text/javascript" src="lib/jquery.flexibleArea.js"></script>
     <link rel="stylesheet" href="style/style.css" type="text/css" />
   </head>
 <body>
-  <label>Jquery & Javascript</label>
+  <label>jquery & javascript</label>
   <ul>
     <li>Live Preview Texting Texarea</li>
     <li>Show and Hide div</li>
