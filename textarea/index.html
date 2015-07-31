@@ -19,8 +19,13 @@
     <br>
     <div class="preview"></div>
     <div class="container">
-      <a id="strike" href="#"><img src='https://cdn3.iconfinder.com/data/icons/unicons-vector-icons-pack/32/settings-128.png' class='img'></a>
-      <textarea rows="4" cols="50" id="textarea" class="source"></textarea>
+      <a id="strike" href="#"><img src='img/strike.png' id='strike_img'></a>
+      <a id="strong" href="#"><img src='img/bold.png' id='strong_img'></a>
+      <a id="italic" href="#"><img src='img/italic.png' id='italic_img'></a>
+      <form action="#">
+        <textarea rows="4" cols="50" id="textarea" class="source"></textarea>
+        <input type="submit" value=SUBMIT>
+      </form>
     </div>
   </div>
   <script type="text/javascript">
@@ -47,6 +52,12 @@
           });
           $('#strike').on('click', function(){
             $('#textarea').val($('#textarea').val() + "<strike></strike>");
+          });
+          $('#strong').on('click', function(){
+            $('#textarea').val($('#textarea').val() + "<strong></strong>");
+          });
+          $('#italic').on('click', function(){
+            $('#textarea').val($('#textarea').val() + "<em></em>");
           });
       });
   </script>
