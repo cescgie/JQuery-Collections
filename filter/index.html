@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <script type="text/javascript" src="../lib/js/jquery-2.0.3.min.js"></script>
+</head>
+<body>
+
+<h1>Filtering</h1>
+<p>Type key to search</p>
+<input width="300px" type="text" id="search" placeholder="Type to search">
+<table width="200px" border="1" id="table" class="table table-striped">
+   	<tr>
+		<th>Name</th>
+	</tr>
+   	<tr>
+		<td>Tono</td>
+	</tr>
+	<tr>
+		<td>Dani</td>
+	</tr>
+	<tr>
+		<td>Dana</td>
+	</tr>
+</table>
+<script type="text/javascript">
+var $rows = $('#table td');
+$('#search').keyup(function() {
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+    	
+    $rows.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text.indexOf(val);
+    }).hide();
+});
+</script>
+</body>
+</html>
